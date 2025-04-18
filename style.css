@@ -1,0 +1,229 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: url('portfolioback.png') no-repeat center/cover;
+    padding-top:10px;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0px;
+    color: white;
+    font-family: 'Pacifico', cursive;
+}
+.background{
+    z-index: -1;
+}
+.overlay{
+    background: rgba(0, 0, 0, 0.5)
+}
+.frankphoto{
+    margin-top:80px;
+}
+.rectangle_text{
+    background-color: #222; 
+    color: white; 
+    padding: 40px 100px 60px 40px;
+    margin-left: 100px;
+    border-radius: 10px;
+    width: 50%;
+    font-size: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+h2 {
+    color: white;
+}
+.stylish-text {
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin-left: 70px;
+    text-align: left;
+    margin-left:100px;
+
+}
+.navbar {
+    position: relative;
+    left: 500px;
+    bottom:0px;
+    display: inline;
+    top:5px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.nav-button {
+    background: none;
+    border:none;
+    position: relative;
+    text-decoration: none;
+    color: #ffffff; 
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    margin-right: 30px;
+}
+
+.nav-button::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: 0; 
+    transition: 0.3s ease-in-out;
+}
+
+.nav-button:hover::after {
+    width:100%;
+}
+
+
+.social-icons {
+    position: absolute;
+    display: flex;
+    right: 450px;
+    gap: 100px;
+    margin:40px;
+}
+
+.social-icons a {
+    font-size: 50px;
+    color: white; 
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.5); 
+    transition: 0.3s ease-in-out;
+}
+.aboutme
+{
+    font-family: 'Pacifico', cursive;
+    margin-top:70px;
+    margin-left: 500px;
+    margin-right:100px;
+    background-color: #222;
+    font-size: 20px;
+    padding:40px;
+    border-radius: 5px;
+}
+.aboutme table td {
+    padding: 15px; 
+}
+
+.aboutme table {
+    border-spacing: 0 12px; 
+    font-family: 'Pacifico', cursive;
+}
+.aboutme p{
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+}
+.skills{
+    margin-top: 50px;
+}
+.skills i{
+    font-size: 50px;
+    margin-left: 40px;
+    color: white;
+    display: inline;
+    margin-bottom: 100px;
+}
+.AOF{
+    display:flex;
+    margin-top:70px;
+    gap:25px;
+    justify-content: center;
+}
+.circle{
+    background: none;
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+    text-align: center;
+    border-radius: 200px;
+    font-size: 20px;
+    border-color: antiquewhite;
+    border-style: solid ;
+    background: rgba(0, 0, 0, 0.2); 
+    backdrop-filter: blur(8px) brightness(60%); 
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; 
+    text-align: center;    
+    flex-wrap: wrap;
+    transition: 0.3s ease-in-out;
+}
+.circle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 0 white;
+}
+.project_list{
+    background-color: #222;
+    font-size: 25px;
+    padding-right: 10%;
+    padding-left: 20%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 20px;
+}
+.project_list img{
+    padding:0px;
+    width:500px;
+    height:auto;
+    float:left;
+    margin:0px;
+    position:absolute;
+    top: 170px;
+    left: 20px;
+}
+.contactinfo{
+    background-color: #222;
+    font-size: 25px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-top: 100px;
+}
+.projectbutton{
+    padding:10px;
+    border-radius: 5px;
+    color:white;
+    background:none;
+    border:2px solid white;
+}
+.footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-top: 5%;
+    font-size: medium;
+    border-radius: 5px;
+}
+.footer a {
+    color: #ffd700; 
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+    font-size: large;
+}
+.footer a:hover {
+    color: #1e90ff; 
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
