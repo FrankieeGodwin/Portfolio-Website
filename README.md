@@ -11,8 +11,7 @@ It is fully responsive and showcases my projects, skills, and contact info.
 - Tailwind CSS
 
 ## 📂 Project Structure
-- `index.html` - Main page
-- `style.css` - Custom styles
+- `index.html` - Main page with tailwind css
 - `assets/` - Images and icons
 
 ## 📬 Contact
