@@ -13,30 +13,162 @@
         html {
   scroll-behavior: smooth;
 }
+
+.slide-container {
+      position: relative;
+      width: 300px; /* adjust as needed */
+      height: 60px;
+      overflow: hidden;
+    }
+
+    .slide-text {
+      position: absolute;
+      white-space: nowrap;
+      transition: transform 0.6s ease-in-out, opacity 0.3s ease-in-out;
+      opacity: 0;
+    }
+
+    .slide-in {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+
+    .slide-visible {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+
+    .slide-out {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+
+
+
+    @keyframes slideFadeIn {
+      0% {
+        opacity: 0;
+        width: 70px;
+        height:auto;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-slideFade {
+      animation: slideFadeIn 1.5s ease-out forwards;
+    }
+
+    /* Optional staggered delay for each div */
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+
+
+    @keyframes slideFadeUp {
+        0%{
+            opacity: 0;
+            transform:translateY(100px);
+        }
+        100%{
+            opacity:1;
+            transform:translateY(0);
+        }
+        
+    }
+
+    .animate-slideUp{
+        animation: slideFadeUp 0.8s ease-out forwards;
+    }
+
+@keyframes navbarScale {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-navbarScale {
+  animation: navbarScale 1.5s ease-out forwards;
+}
+
+@keyframes titleSlide{
+  0%{
+    opacity:0;
+    transform : translateX(-30px);
+  }
+  100%{
+    opacity:1;
+    transform: translateX(0);
+  }
+}
+
+.animate-titleScale{
+  animation :titleSlide 0.8s ease-out forwards;
+}
+
+.wave {
+  background: url('/Images/wave.svg') repeat-x;
+  background-size: cover;
+  opacity: 1;
+}
+
+.wave1 {
+  animation: waveMove1 1s linear infinite;
+}
+.wave2 {
+  animation: waveMove2 2s linear infinite reverse;
+  opacity: 0.3;
+}
+@keyframes waveMove1 {
+  from { background-position-x: 0; }
+  to   { background-position-x: 1000px; }
+}
+
+@keyframes waveMove2 {
+  from { background-position-x: 0; }
+  to   { background-position-x: -1000px; }
+}
+    
     </style>
 </head>
 
 <body class="bg-gradient-to-br from-gray-100 to-gray-300 min-h-screen text-gray-800">
 
    
-    <div class="navbar flex justify-end gap-10 bg-white shadow-md py-4" style="position: sticky; top: 0; z-index: 100;">
-        <div class="mr-[2rem] flex justify-end gap-10">
+    <div class="navbar flex justify-between gap-10 bg-white shadow-md py-4" style="position: sticky; top: 0; z-index: 100;">
+        <h1 class="animate-titleScale delay-1 ml-[20px] font-bold text-3xl text-blue-500">Portfolio</h1>
+        <div class="mr-[2rem] flex justify-end gap-10 opacity-0 scale-[0.6] animate-navbarScale">
         <a class="nav-button text-lg font-semibold hover:text-blue-500 transition after:content-[''] after:block after:w-0 after:h-[2px] after:bg-blue-500 after:left-0 after:bottom-0 after:duration-300 ease-in-out hover:after:w-full" href="#home">Home</a>
         <a class="nav-button text-lg font-semibold hover:text-blue-500 transition after:content-[''] after:block after:w-0 after:h-[2px] after:bg-blue-500 after:left-0 after:bottom-0 after:duration-300 ease-in-out hover:after:w-full" href="HTML Files/Projects.html" target="_blank">Projects</a>
         <a class="nav-button text-lg font-semibold hover:text-blue-500 transition after:content-[''] after:block after:w-0 after:h-[2px] after:bg-blue-500 after:left-0 after:bottom-0 after:duration-300 ease-in-out hover:after:w-full" href="#contact">Contact</a>
         <a class="nav-button text-lg font-semibold hover:text-blue-500 transition after:content-[''] after:block after:w-0 after:h-[2px] after:bg-blue-500 after:left-0 after:bottom-0 after:duration-300 ease-in-out hover:after:w-full" href="#about">About</a>
+        <a class="nav-button text-lg font-semibold hover:text-blue-500 transition after:content-[''] after:block after:w-0 after:h-[2px] after:bg-blue-500 after:left-0 after:bottom-0 after:duration-300 ease-in-out hover:after:w-full" href="#skills">Skills</a>
+        <a class="nav-button text-lg font-semibold hover:text-blue-500 transition after:content-[''] after:block after:w-0 after:h-[2px] after:bg-blue-500 after:left-0 after:bottom-0 after:duration-300 ease-in-out hover:after:w-full" href="#moreAboutMe">More About Me</a>
+        <a class="nav-button text-lg font-semibold hover:text-blue-500 transition after:content-[''] after:block after:w-0 after:h-[2px] after:bg-blue-500 after:left-0 after:bottom-0 after:duration-300 ease-in-out hover:after:w-full" href="#certifications  ">Certifications</a>
+
     </div>
     </div>
 
 
-    <div id="home" class="flex justify-center items-center min-h-screen">
+    <div id="home" class="flex justify-center items-center my-[4rem]">
         <div class="lg:w-4/5 w-full h-auto  rounded-2xl p-10">
             <div class="flex flex-col lg:flex-row-reverse justify-between items-center">
-                <img class="lg:w-[25rem] h-auto ml-auto" src="Images/FrankPhoto.png" alt="Frank Image">
-                <div class="lg:flex lg:text-left lg:items-start w-full flex flex-col items-center text-center">
+<div class="transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-blue-500 rounded-xl inline-block">
+  <img class="lg:w-[18rem] animate-slideFade delay-1 border-4 border-white h-auto ml-auto rounded-xl" src="Images/Frankaboutphoto.jpeg" alt="Frank Image">
+</div>                <div class="lg:flex animate-slideUp delay-1 lg:text-left lg:items-start w-[70%] flex flex-col items-center text-center">
             <h1 class="lg:text-6xl lg:my-[1rem] text-4xl font-bold justify-center my-[4rem] w-full ">Hi!! I'm <br> <span class="text-blue-500">Frank Godwin Raj P</span></h1>
-            <h2 class="lg:text-[2rem] text-[1.5rem] font-bold">Full Stack Developer</h2>
-                <p class="lg:text-lg text-md text-gray-600 w-3/4">
+              <div class="slide-container text-3xl font-bold text-gray-800 w-full">
+    <div id="text1" class="slide-text slide-visible">Full Stack Developer</div>
+    <div id="text2" class="slide-text slide-in">Java Backend Specialist</div>
+  </div>
+                <p class="lg:text-lg text-md text-gray-600 w-3/4 text-justify">
                     A passionate freelance full-stack web developer dedicated to building modern, responsive, and user-friendly websites.
                     With expertise in both frontend and backend development, I craft seamless digital experiences that are efficient, 
                     scalable, and visually appealing.
@@ -45,12 +177,62 @@
                 
                 
             </div>
-            <a href="Documents/Frank Godwin Raj P - RESUME.pdf" download>
+            <div class="animate-slideUp">
+            <a  href="Documents/Frank Godwin Raj P - RESUME.pdf" download>
             <button class="lg:w-[12.5%] w-full mt-[2rem] rounded-2xl border-gray-800 border-[3px] px-[1rem] py-[0.5rem] hover:bg-gray-800 hover:text-white transition-all shadow-md duration-300 hover:scale-110 hover:shadow-lg hover:shadow-gray-100">Download CV</button>
         </a>
         </div>
+        </div>
     </div>
-    <div id="about" class="flex justify-center w-full items-center text-[1rem]">
+
+
+<div class="w-full h-[15vh] overflow-hidden">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none" width="100%" height="100%">
+    <defs>
+      <path
+        id="gentle-wave"
+        d="M0 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"
+      />
+    </defs>
+
+    <g>
+      <g>
+        <use xlink:href="#gentle-wave" fill="#3b82f6" fill-opacity="1.2" />
+        <use xlink:href="#gentle-wave" fill="#3b82f6" fill-opacity="1.2" transform="translate(350, 0)" />
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="translate"
+          from="-200,0"
+          to="-350,0"
+          dur="10s"
+          repeatCount="indefinite"
+        />
+      </g>
+
+      <g>
+        <use xlink:href="#gentle-wave" fill="#002147" fill-opacity="0.8" />
+        <use xlink:href="#gentle-wave" fill="#002147" fill-opacity="0.8" transform="translate(352, 0)" />
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="translate"
+          from="0,0"
+          to="-350,0"
+          dur="6s"
+          repeatCount="indefinite"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
+
+
+
+
+
+
+    <div id="about" class="flex justify-center w-full items-center text-[1rem] my-[5rem]">
         <div class="text-gray-600 w-full">
             <h1 class="text-blue-500 text-center font-bold text-[2rem]">About</h1>
             <div class="lg:flex-row flex flex-col my-10 mx-auto p-10 justify-center w-3/4 items-center text-center lg:items-start lg:text-left">
@@ -62,8 +244,50 @@
             </div>
         </div>
     </div>
+
+
+    <div class="w-full h-[15vh] overflow-hidden">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none" width="100%" height="100%">
+    <defs>
+      <path
+        id="gentle-wave"
+        d="M0 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"
+      />
+    </defs>
+
+    <g>
+      <g>
+        <use xlink:href="#gentle-wave" fill="#3b82f6" fill-opacity="1.2" />
+        <use xlink:href="#gentle-wave" fill="#3b82f6" fill-opacity="1.2" transform="translate(350, 0)" />
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="translate"
+          from="-200,0"
+          to="-350,0"
+          dur="10s"
+          repeatCount="indefinite"
+        />
+      </g>
+
+      <g>
+        <use xlink:href="#gentle-wave" fill="#002147" fill-opacity="0.8" />
+        <use xlink:href="#gentle-wave" fill="#002147" fill-opacity="0.8" transform="translate(352, 0)" />
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="translate"
+          from="0,0"
+          to="-350,0"
+          dur="6s"
+          repeatCount="indefinite"
+        />
+      </g>
+    </g>
+  </svg>
+</div>
     
-    <div class="skills p-10 my-10 mx-20 min-h-screen">
+    <div id="skills" class="skills p-10 my-10 mx-20 min-h-screen">
         <h2 class="text-center justify-center text-3xl font-bold mb-5 text-blue-500 h-[5rem]">My Skills</h2>
         <div class="flex w-full my-10 justify-between">
             <div class="lg:w-1/2 w-full lg:text-left text-center">
@@ -79,7 +303,7 @@
             <img class="hidden md:block w-[30rem] h-[20rem] mt-[10rem] rounded-3xl" src="Images/skills.jpeg" alt="skillimg">
         </div>
     </div>
-    <div class="min-h-screen">
+    <div id="certifications" class="min-h-screen">
                 <h1 class="text-blue-500 text-[2rem] mb-10 font-bold text-center">Certifications</h1>
                 <div class="flex justify-center mx-auto w-3/4">
                     <div class="w-full">
@@ -133,7 +357,7 @@
                     </div>
                 </div>
     </div>
-    <div class="min-h-screen">
+    <div id="moreAboutMe" class="min-h-screen">
         <h1 class="text-blue-500 text-[2rem] mb-10 font-bold text-center">More About Me</h1>
     <div class="flex justify-center mx-auto w-3/4">
         <div class="w-full">
@@ -217,6 +441,41 @@
   function closeModal() {
     document.getElementById("certificateModal").classList.add("hidden");
   }
+      const titles = [
+      "Full Stack Developer",
+      "Java Backend Specialist",
+      "Spring Boot Developer",
+      "Database Architect",
+      "RESTful Web Services Expert"
+    ];
+    let current = 0;
+    let next = 1;
+    let isText1Active = true;
+
+    const text1 = document.getElementById("text1");
+    const text2 = document.getElementById("text2");
+
+    setInterval(() => {
+      const active = isText1Active ? text1 : text2;
+      const nextEl = isText1Active ? text2 : text1;
+
+      // Set next text and slide it in from right
+      nextEl.textContent = titles[next];
+      nextEl.className = "slide-text slide-in";
+
+      // Trigger reflow to restart animation
+      void nextEl.offsetWidth;
+
+      // Animate both
+      active.className = "slide-text slide-out";
+      nextEl.className = "slide-text slide-visible";
+
+      // Update indexes
+      current = next;
+      next = (next + 1) % titles.length;
+      isText1Active = !isText1Active;
+    }, 2000);
+  </script>
 </script>
 
 

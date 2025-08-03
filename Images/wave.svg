@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+  <defs>
+    <path
+      id="gentle-wave"
+      d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"
+    />
+  </defs>
+
+  <g>
+    <use xlink:href="#gentle-wave" fill="#002147" fill-opacity="1.2">
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        from="0,0"
+        to="80,0"
+        dur="10s"
+        repeatCount="indefinite"
+      />
+    </use>
+    <use xlink:href="#gentle-wave" fill="aqua" fill-opacity="0.8">
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        from="0,0"
+        to="-80,0"
+        dur="12s"
+        repeatCount="indefinite"
+      />
+    </use>
+  </g>
+</svg>
