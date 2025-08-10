@@ -18,7 +18,7 @@
 
 .slide-container {
       position: relative;
-      width: 300px; /* adjust as needed */
+      width: 300px; 
       height: 60px;
       overflow: hidden;
     }
@@ -63,7 +63,6 @@
       animation: slideFadeIn 1.5s ease-out forwards;
     }
 
-    /* Optional staggered delay for each div */
     .delay-1 { animation-delay: 0.2s; }
     .delay-2 { animation-delay: 0.4s; }
     .delay-3 { animation-delay: 0.6s; }
@@ -238,7 +237,7 @@
         <h1 class="text-blue-500 text-center font-bold text-[2rem]">About</h1>
         <div class="lg:flex-row flex flex-col my-10 mx-auto p-10 justify-center lg:items-center w-full text-justify md:w-3/4 lg:w-3/4 items-center text-center lg:items-start lg:text-left">
             <img src="Images/Frankaboutphoto.jpeg" alt="frankimg" class="w-[15rem] h-auto mx-20 rounded-3xl">
-<div id="aboutContent" class="opacity-0 translate-y-10 transition-all duration-1000">
+<div id="aboutContent" class="opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-10 transition-all duration-1000">
     <h2 class="font-bold text-gray-800 lg:text-[2rem] text-[1.5rem] my-5 mx-auto">Engineer · Coder · Problem Solver</h2>
     <ul class="list-disc lg:text-lg text-md pl-5 space-y-3">
                     <li>I’m Frank Godwin Raj P, a CSE student driven by a passion for building real-world solutions through code.</li>
@@ -296,7 +295,7 @@
   </svg>
 </div>
     
-    <div id="skills" class="w-full flex flex-col items-center min-h-screen px-6 py-12 bg-white opacity-0 translate-y-10 transition-all duration-500">
+    <div id="skills" class="w-full flex flex-col items-center min-h-screen px-6 py-12 bg-white opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-10 transition-all duration-500">
   <h1 class="text-blue-500 text-[2rem] font-bold text-center mb-10">My Skills</h1>
   
   <div class="grid grid-cols-3 w-[70%] sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-[4rem] md:gap-8 lg:gap-8 justify-items-center">
